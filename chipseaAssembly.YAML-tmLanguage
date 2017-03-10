@@ -1,0 +1,187 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+name: Chipsea
+scopeName: source.chipsea.assembly
+fileTypes: [inc, asm, INC, ASM]
+uuid: 6157814c-5c11-4dcf-8d6f-c550b8a8d11a
+# ADD HISTORY
+# 2017-01-01 Add CSU14PD87
+# 2017-01-19 Add CSU18M8X
+patterns:
+- include: '#registers'
+
+- include: '#mnemonics'
+
+- include: '#constants'
+
+- include: '#comments'
+
+- include: '#preprocessor'
+
+- include: '#string'
+
+repository:
+  comments:
+    patterns:
+    - name: comment.line.string
+      match: (;|(^|\s)#\s).*$
+    - name: comment.block.string
+      begin: /\*
+      end: \*/
+  constants:
+    patterns:
+    - name: constant.numeric.floating-point
+      match: (?i)\b(([0-9]+\.[0-9]*)(e[+-]?[0-9]+)?|\.?[0-9]+e[+-]?[0-9]+)\b
+    - name: constant.numeric.literal
+      match: (?i)(\$[0-9a-f]+)\b
+    - name: constant.numeric.bin
+      match: (?i)\b[01]+b\b
+    - name: constant.numeric.oct
+      match: (?i)\b[0-7]+[oq]\b
+    - name: constant.numeric.dec
+      match: (?i)\b[0-9]+\b
+    - name: constant.numeric.hex
+      match: (?i)\b([0-9a-fA-F]+[hH]|0x[0-9a-fA-F]+)\b
+
+  mnemonics:
+    patterns:
+    - comment: Keyword.other.chipsea
+      name: keyword.control.chipsea.Instruction
+      match: (?i)\b(addlw|addpcw|addwf|addwfc|andlw|andwf|bcf|bsf|btfsc|btfss|call|clrf|clrwdt|comf|daw)\b
+    - name: keyword.control.chipsea.Instruction
+      match: (?i)\b(decf|decfsz|goto|halt|incf|incfsz|iorlw|iorwf|movfw|movlw|movp|movwf|nop|pop|push)\b
+    - name: keyword.control.chipsea.Instruction
+      match: (?i)\b(retfie|retlw|return|rlf|rrf|sleep|sublw|subwf|subwfc|swapf|tblp|xorlw|xorwf)\b
+    - comment: Macro
+    - name: keyword.operator.chipsea.macro
+      match: (?i)\b(movlf|movff|movff2|movff3|movff4|movff5|movff6)\b
+    - name: keyword.operator.chipsea.macro
+      match: (?i)\b(sublf|subff|subff2|subff3|subff4|subff5|subff6)\b
+    - name: keyword.operator.chipsea.macro
+      match: (?i)\b(addlf|addff|addff2|addff3|addff4|addff5|addff6)\b
+    - name: keyword.operator.chipsea.macro
+      match: (?i)\b(clrf2|clrf3|clrf4|clrf5|clrf6)\b
+    - name: keyword.operator.chipsea.macro
+      match: (?i)\b(rlf2|rlf3|rlf4|rlf5|rlf6)\b
+    - name: keyword.operator.chipsea.macro
+      match: (?i)\b(rrf2|rrf3|rrf4|rrf5|rrf6)\b
+    - name: keyword.operator.chipsea.macro
+      match: (?i)\b(addfff3|subfff3)\b
+    - name: keyword.operator.chipsea.macro
+      match: (?i)\b(jz|jnz|jc|jnc|jb|jnb|je|jne)\b
+
+  preprocessor:
+    patterns:
+    - name:  keyword.type
+      begin: (?i)^\s*[\#%]\s*if\s+0\b
+      end:   (?i)^\s*[\#%]\s*endif\b
+    - name: keyword.type
+      match: (?i)\b(dw|org|include|end|equ)\b
+    - name: keyword.other
+      match: (?i)\b(macro|endm|if|endif)\b
+    - name: keyword.other
+      match: (?i)\b(define)\b
+  registers:
+    patterns:
+    - name: support.type.chipsea.system.register
+      match: (?i)\b(IND0|IND1|FSR0|FSR1|STATUS|WORK|INTF|INTE|BSR)\b
+    - name: support.type.chipsea.special.register
+      match: (?i)\b(EADRH|EADRL|EDAT|EOPEN|WDTCON|WDTIN|TMOUT|TMCON|ADOH|ADOL|ADOLL|ADCON)\b
+    - name: support.type.chipsea.special.register
+      match: (?i)\b(MCK|PCK|MCK2|NETA|NETB|NETC|NETD|NETE|NETF|SVD|PT1|PT1EN|PT1PU|PT1CON)\b
+    - name: support.type.chipsea.special.register
+      match: (?i)\b(AIENB|PT2|PT2EN|PT2PU|PT4|PT4EN|PT4PU|PT2MR|PT2CON|PTINT|INTF2|INTE2)\b
+    - name: support.type.chipsea.special.register
+      match: (?i)\b(TM0CON|TM0IN|TM0CNT|TM1CON|TM1IN|TM1CNT|TM1R)\b
+    - name: support.type.chipsea.special.register
+      match: (?i)\b(LCD1|LCD2|LCD3|LCD4|LCD5|LCD6|LCD7|LCD8|LCD9|LCD10|LCD11|LCD12|lcd13|LCD14)\b
+    - name: support.type.chipsea.special.register
+      match: (?i)\b(LED1|LED2|LED3|LED4|LED5|LED6|LED7|LED8|LED9|LED10|LED11|LED12|LED14|LED14)\b
+    - name: support.type.chipsea.special.register
+      match: (?i)\b(LEDCON1|LEDCON2|CHPCON|AD2OH|AD2OL)\b
+    - name: support.type.chipsea.special.register
+      match: (?i)\b(LCDCN1|LCDENR|TEMPC|WDT_C|IOSC_C|TEST|SCON1|SCON2|SBUF|AIENB)\b
+    - name: support.type.chipsea.special.register
+      match: (?i)\b(RTCCON|RTCAER|RTCYEAR|RTCMON|RTCDAY|RTCHOUR|RTCMIN|RTCSEC|RTCDWR|INTEGER|FRACTION)\b
+
+
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(Z|C|DC|TO|PD)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(E0IF|E1IF|ADIF|TMIF|AD2IF|TM0IF|TM1IF)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(E0IE|E1IE|ADIE|TMIE|GIE|AD2IE|TM0IE|TM1IE)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(PAGE0|PAGE1|IRP1|IRP0)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(WDTS0|WDTS1|WDTS2|WDTS3|Wdt_lcd|WDTEN|WDTS_0|WDTS_1|WDTS_2)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(INS0|INS1|INS2|TMEN|TRST)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(ADM0|ADM1|ADM2|ADSC|ADM_0|ADM_1|ADM_2)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(M1_CK|M2_CK)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(S_BEEP0|S_BEEP1|LCDSCKS0|LCDSCKS1|LCDSCKS2|LCDSCKS3)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(CLK_SEL|M3_CK|EO_SLP|CST_IN|CST_E|XTALSEL|TMSEL0|TMSEL1)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(CHPCKS0|CHPCKS1|CHPCKS2|CM_SEL|SINL_0|SINL_1|ACM|SINL0|SINL1)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(ERV)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(ADEN|ADG0|ADG_0|ADG_1|ADG1|ADG_M0|ADG_M1|CHOPM0|CHOPM1|CHOPM_0|CHOPM_1)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(LCDREF0|LCDREF1|VLCDX0|VLCDX1|Level_s|LCDCH)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(ENLB|SILB0|SILB1|SILB2|LDOS0|LDOS1|LB_RST_CON|SILB_0|SILB_1|SILB_2|LDOS_0|LDOS_1)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(ENVB|BGID0|BGID1|BGID2|BGID3|ENVDDA|LDOEN|LVR_EN|CHP_VPP)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(LBOUT)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(AIENB1|AIENB2|AIENB3)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(E0M0|E0M1|E1M0|E1M1|E0M_0|E0M_1|E1M_0|E1M_1|BZEN)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(BZSEL|SEGCON0|SEGCON1)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(PTW0_0|PTW0_1|PTW0_2|PTW1_0|PTW1_1|PTW1_2|PTW1_3)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(URRIF|URTIF|RTCIF)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(URRIE|URTIE|RTCIE)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(T0SEL|T0RSTB|T0RATE_0|T0RATE_1|T0RATE_2|T0EN)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(PWM1OUT|T1OUT|T1RSTB|T1CKS|T1RATE_0|T1RATE_1|T1RATE_2|T1EN)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(LED_PMODE|LEDCLKS_0|LEDCLKS_1|LED_DUTY0|LED_DUTY1|LED_DUTY2|LED_Current0|LED_Current1|LED_Current2)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(LEDEN|CONT_SEL)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(CSE_LCD)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(CHPEN|CHPCLKS_0|CHPCLKS_1|CHPCLKS_2|CHPVS)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(AD2EN)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(RTCEN|H_24_12|LIR)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(DWR_0|DWR_1|DWR_2)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(ENPMPL|LCD_DUTY0|LCD_DUTY1|LEVEL|LCDWS|LCDEN|LCDCKS0|LCDCKS1)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(WDT_C1|WDT_C2|WDT_C3)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(UARTEN|UART_SEL|RB8|TB8|REN|SM2|SM1|SM0)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(SMOD)\b
+    - name: support.constant.chipsea.sfr.bitmap
+      match: (?i)\b(W|F)\b
+
+  string:
+    patterns:
+    - name: support.function
+      match: '^\s*(%%)?(\w|[\._?])(\w|[_$#@~\.?])*\:'
+    - name: support.function
+      match: '^\s*([$@~])(\w|[_$#@~\.?])*\:'
