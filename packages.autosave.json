@@ -6,11 +6,11 @@
        "description": "Chipsea Assembly HighLight",
        "author": "junglefive",
        "homepage": "https://github.com/junglefive/ChipseaAssembly",
-       "last_modified": "2017-03-10"
+       "last_modified": "2017-03-10",
        "platforms": {
         "*": [
          {
-          "version": "V1.0
+          "version": "V1.0",
           "url": " https://nodeload.github.com/junglefive/ChipseaAssembly/zip/chipsea "
          }
         ]
