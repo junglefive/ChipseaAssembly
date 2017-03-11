@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+;============================================
+;                  声明 
+; 该程序仅供参考和用于芯片正常工作环境下对其
+; 进行简单的功能测试。若程序中存在疏漏，芯海
+; 科技(深圳)股份有限公司对此不承担任何责任。
+;   (C)Shenzhen Chipsea Technologies Co.,Ltd
+;============================================
+; filename: 
+; author  : 
+; date    : 
+; function:
+;============================================
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>cshead</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

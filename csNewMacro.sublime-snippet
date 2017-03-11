@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+/*-------------------------------------------
+@Name    : 
+@Function: 
+@Input   : 
+@Output  :
+@Temp    :  
+@Other   :
+@log     :
+--------------------------------------------*/
+Example_movff MACRO f1, f2
+    movfw f1
+    movwf f2
+    endm
+/*------------------------------------------*/
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <!-- Chipsea new Macro -->
+    <tabTrigger>csnm</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
