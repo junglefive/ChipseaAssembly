@@ -1,6 +1,6 @@
 # [ChipseaAssembly](https://github.com/junglefive/ChipseaAssembly)
 
-Chipsea Assembly Highlight
+  Chipsea Assembly Highlight
 
 ## 1. 使用方法
 - 打开软件，复制文件夹ChipseaAssembly，进入sublime/preference/Browse Packages,粘贴到当前目录
