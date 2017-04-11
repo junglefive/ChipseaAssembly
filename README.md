@@ -3,7 +3,7 @@
   *本文档说明 `Chipsea` 汇编，在文本编辑器 `Sublime Text 3 (3126)` 中的高亮显示插件使用及修改方法*
 
 ## 使用方法
-> 使用
+> 使用:
 - 首先需安装 `Sublime Text 3` 文本编辑器，目前官方稳定版本号为 `3126` .
 - 打开软件，复制文件夹 `ChipseaAssembly` ，进入 `sublime/preference/Browse Packages`,粘贴到当前目录
 - 打开代码源文件，语法选择`sublime/View/Syntax/Chipsea`
@@ -24,15 +24,16 @@
   
 ## 更新记录
 
-> 更新20170313
+> 更新20170313:
 
   - add keyword `csnf`     As `<!-- ChipSea New Function -->`
   - add keyword `csfc`     As `<!-- ChipSea Function Comments -->`
   - add keyword `cshead`   As `<!-- ChipSea Head declare-->`
   - add keyword `csnm`     As `<!-- ChipSea New Macro-->`
 
-> 更新20170322
+> 更新20170322:
 
   - add keyword `csdelay`  AS `<!-- ChipSea New Delay_1ms -->`
 
+> 更新20170411:
 > 
