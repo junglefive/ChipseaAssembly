@@ -7,7 +7,7 @@
 ; Output  :
 ; Temp    :  
 ; Other   :
-; log:
+; log     :
 --------------------------------------------*/
 F_default_name:
     
@@ -16,7 +16,7 @@ F_default_name:
 
 
     return
-/*------------------------------------------*/
+
 ]]></content>
 <!-- ChipSea New Function -->
  <tabTrigger>csnf</tabTrigger>

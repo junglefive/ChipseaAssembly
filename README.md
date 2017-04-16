@@ -24,16 +24,25 @@
   
 ## 更新记录
 
-> 更新20170313:
+> 2017/3/13
 
   - add keyword `csnf`     As `<!-- ChipSea New Function -->`
   - add keyword `csfc`     As `<!-- ChipSea Function Comments -->`
   - add keyword `cshead`   As `<!-- ChipSea Head declare-->`
   - add keyword `csnm`     As `<!-- ChipSea New Macro-->`
 
-> 更新20170322:
+> 2017/3/22
 
   - add keyword `csdelay`  AS `<!-- ChipSea New Delay_1ms -->`
 
-> 更新20170411:
-> 
+>  2017/4/16
+
+  - add keyword `cdnb`     As `<!-- Chipesa NewBlock -->`
+
+
+
+
+
+
+
+
