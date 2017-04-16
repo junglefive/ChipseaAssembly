@@ -1,15 +1,15 @@
 <snippet>
     <content><![CDATA[
-;/*-------------------------------------------
-@Name    : F_DELAY_1MS
-@Function: F_DELAY_1MS OF 1M CPUCLKS
-@Input   : NONE
-@Output  : INTE.GIE = 1
-@Temp    : WORK, INTE
-@Other   : IF(CLK =  1M, DELAY = 1.000MS)
-@log:	 : (3+4*249-1+2) = 1000 CPUCLKS
---------------------------------------------*/
-F_DELAY_1MS:
+/*-------------------------------------------
+ ; Name    : F_DELAY_1MS
+ ; Function: F_DELAY_1MS OF 1M CPUCLKS
+ ; Input   : NONE
+ ; Output  : INTE.GIE = 1
+ ; Temp    : WORK, INTE
+ ; Other   : IF(CLK =  1M, DELAY = 1.000MS)
+ ; log:	 : (3+4*249-1+2) = 1000 CPUCLKS
+ ;-------------------------------------------*/
+F_Delay_1MS:
 	BCF    INTE, GIE
 	MOVLW  0X0F				   /*COUNT = 249*/		
 	NOP
