@@ -39,7 +39,10 @@
 
   - add keyword `cdnb`     As `<!-- Chipesa NewBlock -->`
 
+> 2017/7/21 
 
+  - 增加了注释的长度 
+  - 注释中不带`=`号
 
 
 
