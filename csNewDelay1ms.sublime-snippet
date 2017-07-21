@@ -7,18 +7,18 @@
  ; Output  : INTE.GIE = 1
  ; Temp    : WORK, INTE
  ; Other   : IF(CLK =  1M, DELAY = 1.000MS)
- ; log     : (3+4*249-1+2) = 1000 CPUCLKS
+ ; log     : (3+4*249-1+2) = 1000 CPUCLKS（count = 249 ）
  ;-------------------------------------------------------------------------------------------------*/
 F_Delay_1MS:
-	BCF    INTE, GIE
-	MOVLW  0X0F				   /*COUNT = 249*/		
-	NOP
-	NOP
-	NOP
-	INCFSZ WORK, W
-	GOTO   \$-3
-	BSF    INTE, GIE
-	RETURN
+    bcf    inte, gie
+    movlw  0x0f                     
+    nop
+    nop
+    nop
+    incfsz work, w
+    goto   \$-3
+    bsf    inte, gie
+return
 
 ]]></content>
 <!-- ChipSeaFunctionComments -->
