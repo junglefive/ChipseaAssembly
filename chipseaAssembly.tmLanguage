@@ -206,7 +206,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)\b(define)\b</string>
+					<string>(?i)\b(define|high|low)\b</string>
 					<key>name</key>
 					<string>keyword.other</string>
 				</dict>

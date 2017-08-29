@@ -18,10 +18,10 @@
 
   - `{数字编号}` 可以得到一个`TAB`占位符
   - `{1:default}` 可以得到一个默认值
-  - `\$`可以得到`$`字符, 实例见 `csndelay` 
+  - `\$`可以得到`$`字符, 实例见 `csndelay`
   - [手把手教你写`Sublime中`的Snippet](http://www.jianshu.com/p/356bd7b2ea8e)
   - [`sublime3`自定义`snippets`小技巧](https://segmentfault.com/a/1190000002598116)
-  
+
 ## 更新记录
 
 > 2017/3/13
@@ -39,12 +39,14 @@
 
   - add keyword `cdnb`     As `<!-- Chipesa NewBlock -->`
 
-> 2017/7/21 
+> 2017/7/21
 
-  - 增加了注释的长度 
+  - 增加了注释的长度
   - 注释中不带`=`号
 
+> 2017/8/29
 
+ - 增加了对`high` `low`的高亮
 
 
 
