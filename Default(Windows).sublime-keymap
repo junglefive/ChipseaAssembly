@@ -1,0 +1,10 @@
+[
+    {
+        "keys": ["ctrl+/"], "command": "cs_comments",
+        "args": { "block": false }
+    },
+    {
+        "keys": ["ctrl+shift+/"], "command": "cs_comments",
+        "args": { "block": true }
+    },
+]

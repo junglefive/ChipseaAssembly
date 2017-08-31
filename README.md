@@ -47,7 +47,11 @@
 > 2017/8/29
 
  - 增加了对`high` `low`的高亮
+ - 增加了快捷注释`ctrl + /` `ctrl + shift + /`
 
+> 2017/8/31
+
+ - 增加了`Comments.tmpreferences`对单行注释和多行注释进行支持
 
 
 
