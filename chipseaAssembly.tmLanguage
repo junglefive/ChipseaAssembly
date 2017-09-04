@@ -190,31 +190,37 @@
 					<key>end</key>
 					<string>(?i)^\s*[\#%]\s*endif\b</string>
 					<key>name</key>
-					<string>keyword.type</string>
+					<string>support.function</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(dw|org|include|end|equ)\b</string>
 					<key>name</key>
-					<string>keyword.type</string>
+					<string>support.function</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(macro|endm|if|endif)\b</string>
 					<key>name</key>
-					<string>keyword.other</string>
+					<string>support.function</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)\b(define|high|low)\b</string>
+					<string>(?i)\b(define|high|low|$)\b</string>
 					<key>name</key>
-					<string>keyword.other</string>
+					<string>support.function</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(bank0|bank1|bank2|bank3|bank4|bank5|bank6|bank7)\b</string>
 					<key>name</key>
-					<string>keyword.other</string>
+					<string>support.function</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b(bankisel|banksel|text|db|#define|ds|dw|dt|else|elseif|end|endif|endm|ends|endw|while|equ|exitm|error|extem|global|section|if|ifdef|ifndef|#include|macro|org|#undefine|warnning|rom|ram|addr)\b</string>
+					<key>name</key>
+					<string>support.function</string>
 				</dict>
 			</array>
 		</dict>

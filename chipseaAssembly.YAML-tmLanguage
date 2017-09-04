@@ -71,17 +71,19 @@ repository:
 
   preprocessor:
     patterns:
-    - name:  keyword.type
+    - name: support.function
       begin: (?i)^\s*[\#%]\s*if\s+0\b
       end:   (?i)^\s*[\#%]\s*endif\b
-    - name: keyword.type
+    - name: support.function
       match: (?i)\b(dw|org|include|end|equ)\b
-    - name: keyword.other
+    - name: support.function
       match: (?i)\b(macro|endm|if|endif)\b
-    - name: keyword.other
-      match: (?i)\b(define|high|low)\b
-    - name: keyword.other
+    - name: support.function
+      match: (?i)\b(define|high|low|$)\b
+    - name: support.function
       match: (?i)\b(bank0|bank1|bank2|bank3|bank4|bank5|bank6|bank7)\b
+    - name: support.function
+      match: (?i)\b(bankisel|banksel|text|db|#define|ds|dw|dt|else|elseif|end|endif|endm|ends|endw|while|equ|exitm|error|extem|global|section|if|ifdef|ifndef|#include|macro|org|#undefine|warnning|rom|ram|addr)\b
   registers:
     patterns:
     - name: support.type.chipsea.system.register
