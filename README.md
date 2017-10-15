@@ -53,5 +53,9 @@
 
  - 增加了`Comments.tmpreferences`对单行注释和多行注释进行支持
 
+> 2017/10/15
 
-
+ - 增加插件`InsertNum`->[`ctrl+alt+N`]
+ - 增加插件`ClearConsole`->[`alt+k`]
+ - 增加`cs-asm`自动格式化排版->[`ctrl+alt+F`]
+ - 增加`view->console`显示`equ`,`define`,`macro`定义

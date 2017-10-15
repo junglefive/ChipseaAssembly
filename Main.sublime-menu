@@ -1,0 +1,27 @@
+[
+    {
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "ChipseaAssembly",
+                        "children":
+                        [
+                            {
+                                "command": "open_file",
+                                "args": {"file": "${packages}/ChipseaAssembly/README.md"},
+                                "caption": "Readme"
+                            },
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
