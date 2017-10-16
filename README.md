@@ -59,3 +59,8 @@
  - 增加插件`ClearConsole`->[`alt+k`]
  - 增加`cs-asm`自动格式化排版->[`ctrl+alt+F`]
  - 增加`view->console`显示`equ`,`define`,`macro`定义
+
+> 2017/10/16
+
+ - 修复`Include`缩进改为不缩进
+ - 修复带`Macro`的行误缩进

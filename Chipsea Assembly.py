@@ -126,7 +126,8 @@ class ChipseaAlign(sublime_plugin.TextCommand):
                   tmp = tmp.strip()
                   content = tmp
                   tmp = re.sub(r"[\s]+"," ", tmp)
-                  if re.match(r".*:|.*(?i)macro", tmp):
+                  # 不加缩进
+                  if re.match(r".*:|.*(?i)macro|^\s*include.*", tmp):
                         re_out += tmp+"\n"
                   else:
                         len_content  =len(tmp)
