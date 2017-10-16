@@ -63,7 +63,6 @@ class ChipseaGetDefine(sublime_plugin.ViewEventListener  ):
 class ChipseaAlign(sublime_plugin.TextCommand):
     """docstring for ChipseaAlign"""
     def run(self, edit):
-        RE_func_lable = r"^\s*([$@~])(\w|[_$#@~\.?])*\:"
         for region in self.view.sel():
             lines = self.view.substr(region)
 
@@ -95,8 +94,8 @@ class ChipseaAlign(sublime_plugin.TextCommand):
             for line in line_list:
                 tmp = line.strip()
                 tmp_list = re.split(r";",tmp)
-                if re.match(r".*(?i)equ",tmp):
-                    equ_list = re.split(r"(?i)equ",tmp)
+                if re.match(r".*(?i)\bequ\b",tmp):
+                    equ_list = re.split(r"(?i)\bequ\b",tmp)
                     equ_content = equ_list[0]
                     equ_content = equ_content.strip()
                     equ_content = re.sub(r"[\s]+"," ", equ_content)
@@ -127,7 +126,7 @@ class ChipseaAlign(sublime_plugin.TextCommand):
                   content = tmp
                   tmp = re.sub(r"[\s]+"," ", tmp)
                   # 不加缩进
-                  if re.match(r".*:|.*(?i)macro|^\s*include.*", tmp):
+                  if re.match(r"(?i).*:|.*\bmacro\b|^\s*\binclude\b.*", tmp):
                         re_out += tmp+"\n"
                   else:
                         len_content  =len(tmp)
@@ -138,7 +137,7 @@ class ChipseaAlign(sublime_plugin.TextCommand):
 
                             if length == 0:
                                 pass
-                            elif re.match(r".*(?i)equ",tmp):
+                            elif re.match(r".*(?i)\bequ\b",tmp):
                                  # print("get equ")
                                  for i in range(0,line_equ_max_length-length):
                                     tmp_str += " "
