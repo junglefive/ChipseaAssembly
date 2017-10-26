@@ -115,44 +115,41 @@ class ChipseaAlign(sublime_plugin.TextCommand):
 
             for line in  line_list:
               tmp = line.strip()
-              if len(tmp) == 0:
-                pass
+              tmp_list =  re.split(r";",tmp)
+              comment = tmp.replace(tmp_list[0],"")
+              comment = re.sub(r"[\s]+"," ", comment)
+              tmp = tmp_list[0]
+              tmp = tmp.strip()
+              content = tmp
+              tmp = re.sub(r"[\s]+"," ", tmp)
+              # 不加缩进
+              if re.match(r"(?i).*:|.*\bmacro\b|^\s*\binclude\b.*", tmp):
+                    re_out += tmp+"\n"
               else:
-                  tmp_list =  re.split(r";",tmp)
-                  comment = tmp.replace(tmp_list[0],"")
-                  comment = re.sub(r"[\s]+"," ", comment)
-                  tmp = tmp_list[0]
-                  tmp = tmp.strip()
-                  content = tmp
-                  tmp = re.sub(r"[\s]+"," ", tmp)
-                  # 不加缩进
-                  if re.match(r"(?i).*:|.*\bmacro\b|^\s*\binclude\b.*", tmp):
-                        re_out += tmp+"\n"
-                  else:
-                        len_content  =len(tmp)
-                        if len_content > 1:
-                            block_list = re.split(r"\s",tmp)
-                            length = len(block_list[0])
-                            tmp_str = block_list[0]
+                    len_content  =len(tmp)
+                    if len_content > 1:
+                        block_list = re.split(r"\s",tmp)
+                        length = len(block_list[0])
+                        tmp_str = block_list[0]
 
-                            if length == 0:
-                                pass
-                            elif re.match(r".*(?i)\bequ\b",tmp):
-                                 # print("get equ")
-                                 for i in range(0,line_equ_max_length-length):
-                                    tmp_str += " "
+                        if length == 0:
+                            pass
+                        elif re.match(r".*(?i)\bequ\b",tmp):
+                             # print("get equ")
+                             for i in range(0,line_equ_max_length-length):
+                                tmp_str += " "
 
-                            else:
-                               for i in range(0,7-length):
-                                    tmp_str += " "
-                            tmp = tmp.replace(block_list[0], tmp_str)
-                            tmp_len = len(tmp)
-                            # re_out += "    "+tmp+" "+comment+"\n"
-                            for i in range(0, line_content_max_length - tmp_len):
-                                tmp += " "
-                            re_out +=  "    "+tmp+comment+"\n"
-                        else :
-                            re_out += comment+"\n"
+                        else:
+                           for i in range(0,7-length):
+                                tmp_str += " "
+                        tmp = tmp.replace(block_list[0], tmp_str)
+                        tmp_len = len(tmp)
+                        # re_out += "    "+tmp+" "+comment+"\n"
+                        for i in range(0, line_content_max_length - tmp_len):
+                            tmp += " "
+                        re_out +=  "    "+tmp+comment+"\n"
+                    else :
+                        re_out += comment+"\n"
 
             self.view.replace(edit, region, re_out)
 

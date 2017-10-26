@@ -64,3 +64,7 @@
 
  - 修复`Include`缩进改为不缩进
  - 修复带`Macro`的行误缩进
+
+> 2017/10/26
+
+ - 空行不做处理(使用`DeleteBlankLines`->`Ctrl+Alt+Backspace `即可)
