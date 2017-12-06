@@ -51,7 +51,7 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#selfdefines</string>
+			<string>#variables</string>
 		</dict>
 	</array>
 	<key>repository</key>
@@ -237,30 +237,6 @@
 					<string>(?i)\b(jz|jnz|jc|jnc|jb|jnb|je|jne)\b</string>
 					<key>name</key>
 					<string>keyword.operator.chipsea</string>
-				</dict>
-			</array>
-		</dict>
-		<key>selfdefines</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>^\s*(%%)?(\w|[\._?])(\w|[_$#@~\.?])*\:</string>
-					<key>name</key>
-					<string>support.function</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>^\s*([$@~])(\w|[_$#@~\.?])*\:</string>
-					<key>name</key>
-					<string>support.function</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>(?i)\b([FLMRC]_[(\w|[_$#@~\.?])]*)\b</string>
-					<key>name</key>
-					<string>entity.name.type</string>
 				</dict>
 			</array>
 		</dict>
@@ -567,6 +543,42 @@
 					<string>(?i)\b(|RXF_WATER_LEVEL_2|RXF_WATER_LEVEL_1|RXF_WATER_LEVEL_0|TXF_WATER_LEVEL_2|TXF_WATER_LEVEL_1|TXF_WATER_LEVEL_0)\b</string>
 					<key>name</key>
 					<string>support.variable</string>
+				</dict>
+			</array>
+		</dict>
+		<key>variables</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>^\s*(%%)?(\w|[\._?])(\w|[_$#@~\.?])*\:</string>
+					<key>name</key>
+					<string>support.function</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>^\s*([$@~])(\w|[_$#@~\.?])*\:</string>
+					<key>name</key>
+					<string>support.function</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b([FLMRC]_[(\w|[_$#@~\.?])]*)\b</string>
+					<key>name</key>
+					<string>variable.language</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b([MRC]_[(\w|[_$#@~\.?])]*)\b</string>
+					<key>name</key>
+					<string>variable.language</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b([B]_[(\w|[_$#@~\.?])]*)\b</string>
+					<key>name</key>
+					<string>variable.language</string>
 				</dict>
 			</array>
 		</dict>
