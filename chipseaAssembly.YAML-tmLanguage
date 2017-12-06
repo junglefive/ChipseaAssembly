@@ -197,7 +197,9 @@ repository:
       match: (?i)\b(|RXF_WATER_LEVEL_2|RXF_WATER_LEVEL_1|RXF_WATER_LEVEL_0|TXF_WATER_LEVEL_2|TXF_WATER_LEVEL_1|TXF_WATER_LEVEL_0)\b
   function:
     patterns:
-    - name: support.function
+    - name: variable.parameter
       match: '^\s*(%%)?(\w|[\._?])(\w|[_$#@~\.?])*\:'
-    - name: support.function
+    - name: variable.parameter
       match: '^\s*([$@~])(\w|[_$#@~\.?])*\:'
+    - name: variable.parameter
+      match: (?i)\b([LMRC]_.*)|\b

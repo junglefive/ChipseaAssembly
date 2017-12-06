@@ -166,13 +166,19 @@
 					<key>match</key>
 					<string>^\s*(%%)?(\w|[\._?])(\w|[_$#@~\.?])*\:</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>variable.parameter</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>^\s*([$@~])(\w|[_$#@~\.?])*\:</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>variable.parameter</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b([LMRC]_.*)|\b</string>
+					<key>name</key>
+					<string>variable.parameter</string>
 				</dict>
 			</array>
 		</dict>
