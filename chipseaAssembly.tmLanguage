@@ -49,6 +49,10 @@
 			<key>include</key>
 			<string>#function</string>
 		</dict>
+		<dict>
+			<key>include</key>
+			<string>#selfdefines</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
@@ -124,61 +128,37 @@
 					<key>end</key>
 					<string>(?i)^\s*[\#%]\s*endif\b</string>
 					<key>name</key>
-					<string>entity.name.type</string>
+					<string>string.interpolated</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(dw|org|include|end|equ)\b</string>
 					<key>name</key>
-					<string>entity.name.type</string>
+					<string>string.interpolated</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(macro|endm|if|endif)\b</string>
 					<key>name</key>
-					<string>entity.name.type</string>
+					<string>string.interpolated</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(define|high|low|$)\b</string>
 					<key>name</key>
-					<string>entity.name.type</string>
+					<string>string.interpolated</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(bank0|bank1|bank2|bank3|bank4|bank5|bank6|bank7)\b</string>
 					<key>name</key>
-					<string>entity.name.type</string>
+					<string>string.interpolated</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(bankisel|banksel|text|db|#define|ds|dw|dt|else|elseif|end|endif|endm|ends|endw|while|equ|exitm|error|extem|global|section|if|ifdef|ifndef|#include|macro|org|#undefine|warnning|rom|ram|addr)\b</string>
 					<key>name</key>
-					<string>entity.name.type</string>
-				</dict>
-			</array>
-		</dict>
-		<key>function</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>^\s*(%%)?(\w|[\._?])(\w|[_$#@~\.?])*\:</string>
-					<key>name</key>
-					<string>variable.parameter</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>^\s*([$@~])(\w|[_$#@~\.?])*\:</string>
-					<key>name</key>
-					<string>variable.parameter</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>(?i)\b([LMRC]_.*)|\b</string>
-					<key>name</key>
-					<string>variable.parameter</string>
+					<string>string.interpolated</string>
 				</dict>
 			</array>
 		</dict>
@@ -257,6 +237,30 @@
 					<string>(?i)\b(jz|jnz|jc|jnc|jb|jnb|je|jne)\b</string>
 					<key>name</key>
 					<string>keyword.operator.chipsea</string>
+				</dict>
+			</array>
+		</dict>
+		<key>selfdefines</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>^\s*(%%)?(\w|[\._?])(\w|[_$#@~\.?])*\:</string>
+					<key>name</key>
+					<string>support.function</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>^\s*([$@~])(\w|[_$#@~\.?])*\:</string>
+					<key>name</key>
+					<string>support.function</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b([FLMRC]_[(\w|[_$#@~\.?])]*)\b</string>
+					<key>name</key>
+					<string>entity.name.type</string>
 				</dict>
 			</array>
 		</dict>
