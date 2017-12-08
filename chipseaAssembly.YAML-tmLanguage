@@ -27,6 +27,12 @@ patterns:
 
 - include: '#variables'
 
+- include: '#methods'
+
+- include: '#boolean'
+
+- include: '#storage'
+
 repository:
   comments:
     patterns:
@@ -204,8 +210,12 @@ repository:
     - name: support.function
       match: '^\s*([$@~])(\w|[_$#@~\.?])*\:'
     - name: variable.language
-      match: (?i)\b([FLMRC]_[(\w|[_$#@~\.?])]*)\b
-    - name: variable.language
-      match: (?i)\b([MRC]_[(\w|[_$#@~\.?])]*)\b
-    - name: variable.language
+      match: (?i)\b([C]_[(\w|[_$#@~\.?])]*)\b
+    - name: support.function
+      match: (?i)\b([L]_[(\w|[_$#@~\.?])]*)\b
+    - name: method.chipsea
+      match: (?i)\b([R]_[(\w|[_$#@~\.?])]*)\b
+    - name: storage.type
+      match: (?i)\b([M]_[(\w|[_$#@~\.?])]*)\b
+    - name: constant.chipsea
       match: (?i)\b([B]_[(\w|[_$#@~\.?])]*)\b

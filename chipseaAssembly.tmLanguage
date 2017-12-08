@@ -53,6 +53,18 @@
 			<key>include</key>
 			<string>#variables</string>
 		</dict>
+		<dict>
+			<key>include</key>
+			<string>#methods</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#boolean</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#storage</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
@@ -564,21 +576,33 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)\b([FLMRC]_[(\w|[_$#@~\.?])]*)\b</string>
+					<string>(?i)\b([C]_[(\w|[_$#@~\.?])]*)\b</string>
 					<key>name</key>
 					<string>variable.language</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)\b([MRC]_[(\w|[_$#@~\.?])]*)\b</string>
+					<string>(?i)\b([L]_[(\w|[_$#@~\.?])]*)\b</string>
 					<key>name</key>
-					<string>variable.language</string>
+					<string>support.function</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b([R]_[(\w|[_$#@~\.?])]*)\b</string>
+					<key>name</key>
+					<string>method.chipsea</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b([M]_[(\w|[_$#@~\.?])]*)\b</string>
+					<key>name</key>
+					<string>storage.type</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b([B]_[(\w|[_$#@~\.?])]*)\b</string>
 					<key>name</key>
-					<string>variable.language</string>
+					<string>constant.chipsea</string>
 				</dict>
 			</array>
 		</dict>
