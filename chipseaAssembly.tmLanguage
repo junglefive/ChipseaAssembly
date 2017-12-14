@@ -206,49 +206,49 @@
 					<key>match</key>
 					<string>(?i)\b(movlf|movff|movff2|movff3|movff4|movff5|movff6)\b</string>
 					<key>name</key>
-					<string>keyword.operator.chipsea</string>
+					<string>keyword.control.chipsea.Instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(sublf|subff|subff2|subff3|subff4|subff5|subff6)\b</string>
 					<key>name</key>
-					<string>keyword.operator.chipsea</string>
+					<string>keyword.control.chipsea.Instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(addlf|addff|addff2|addff3|addff4|addff5|addff6)\b</string>
 					<key>name</key>
-					<string>keyword.operator.chipsea</string>
+					<string>keyword.control.chipsea.Instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(clrf2|clrf3|clrf4|clrf5|clrf6)\b</string>
 					<key>name</key>
-					<string>keyword.operator.chipsea</string>
+					<string>keyword.control.chipsea.Instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(rlf2|rlf3|rlf4|rlf5|rlf6)\b</string>
 					<key>name</key>
-					<string>keyword.operator.chipsea</string>
+					<string>keyword.control.chipsea.Instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(rrf2|rrf3|rrf4|rrf5|rrf6)\b</string>
 					<key>name</key>
-					<string>keyword.operator.chipsea</string>
+					<string>keyword.control.chipsea.Instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(addfff3|subfff3)\b</string>
 					<key>name</key>
-					<string>keyword.operator.chipsea</string>
+					<string>keyword.control.chipsea.Instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(jz|jnz|jc|jnc|jb|jnb|je|jne)\b</string>
 					<key>name</key>
-					<string>keyword.operator.chipsea</string>
+					<string>keyword.control.chipsea.Instruction</string>
 				</dict>
 			</array>
 		</dict>
@@ -582,7 +582,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)\b([L]_[(\w|[_$#@~\.?])]*)\b</string>
+					<string>(?i)\b([FL]_[(\w|[_$#@~\.?])]*)\b</string>
 					<key>name</key>
 					<string>support.function</string>
 				</dict>

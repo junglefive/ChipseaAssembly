@@ -66,21 +66,21 @@ repository:
     - name: keyword.control.chipsea.Instruction
       match: (?i)\b(retfie|retlw|return|rlf|rrf|sleep|sublw|subwf|subwfc|swapf|tblp|xorlw|xorwf)\b
     - comment: mac
-    - name: keyword.operator.chipsea
+    - name: keyword.control.chipsea.Instruction
       match: (?i)\b(movlf|movff|movff2|movff3|movff4|movff5|movff6)\b
-    - name: keyword.operator.chipsea
+    - name: keyword.control.chipsea.Instruction
       match: (?i)\b(sublf|subff|subff2|subff3|subff4|subff5|subff6)\b
-    - name: keyword.operator.chipsea
+    - name: keyword.control.chipsea.Instruction
       match: (?i)\b(addlf|addff|addff2|addff3|addff4|addff5|addff6)\b
-    - name: keyword.operator.chipsea
+    - name: keyword.control.chipsea.Instruction
       match: (?i)\b(clrf2|clrf3|clrf4|clrf5|clrf6)\b
-    - name: keyword.operator.chipsea
+    - name: keyword.control.chipsea.Instruction
       match: (?i)\b(rlf2|rlf3|rlf4|rlf5|rlf6)\b
-    - name: keyword.operator.chipsea
+    - name: keyword.control.chipsea.Instruction
       match: (?i)\b(rrf2|rrf3|rrf4|rrf5|rrf6)\b
-    - name: keyword.operator.chipsea
+    - name: keyword.control.chipsea.Instruction
       match: (?i)\b(addfff3|subfff3)\b
-    - name: keyword.operator.chipsea
+    - name: keyword.control.chipsea.Instruction
       match: (?i)\b(jz|jnz|jc|jnc|jb|jnb|je|jne)\b
 
   entitys:
@@ -212,7 +212,7 @@ repository:
     - name: variable.language
       match: (?i)\b([C]_[(\w|[_$#@~\.?])]*)\b
     - name: support.function
-      match: (?i)\b([L]_[(\w|[_$#@~\.?])]*)\b
+      match: (?i)\b([FL]_[(\w|[_$#@~\.?])]*)\b
     - name: method.chipsea
       match: (?i)\b([R]_[(\w|[_$#@~\.?])]*)\b
     - name: storage.type
