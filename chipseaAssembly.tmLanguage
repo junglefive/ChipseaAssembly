@@ -74,7 +74,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(;|(^|\s)#\s).*$</string>
+					<string>(//|;|(^|\s)#\s).*$</string>
 					<key>name</key>
 					<string>comment.line.string</string>
 				</dict>
@@ -250,6 +250,48 @@
 					<key>name</key>
 					<string>keyword.control.chipsea.Instruction</string>
 				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b(and|and_into|iand|iand_into|ior|ixor|or|or_into|)\b</string>
+					<key>name</key>
+					<string>keyword.control.chipsea.Instruction</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b(add|sub|div|iadd|isub|idiv|increase|imul32|random|pincrease|mul32)\b</string>
+					<key>name</key>
+					<string>keyword.control.chipsea.Instruction</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b(lshift|lshift2|lshift3|lshift4|rshift|rshift2|rshift3|rshift4|setflag|nsetflag)\b</string>
+					<key>name</key>
+					<string>keyword.control.chipsea.Instruction</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b(isolate1|isolate0|qisolate1|qisolate0|set0|set1|byteswap|setflip|qset0|qset1|compare|icompare|invert|reverse)\b</string>
+					<key>name</key>
+					<string>keyword.control.chipsea.Instruction</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b(jam|hjam|fetch|fetcht|ifetch|ifetcht|hfetch|hfetcht|store|storet|istore|istoret)\b</string>
+					<key>name</key>
+					<string>keyword.control.chipsea.Instruction</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b(hstore|force|iforce|arg|setarg|copy|deposit|disable|enable)\b</string>
+					<key>name</key>
+					<string>keyword.control.chipsea.Instruction</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b(call|rtn|nrtn|rtneq|rtnbit1|rtnbit0|branch|bbit1|bbit0|beq|bne|loop|bpatch|parse)\b</string>
+					<key>name</key>
+					<string>keyword.control.chipsea.Instruction</string>
+				</dict>
 			</array>
 		</dict>
 		<key>support</key>
@@ -313,6 +355,12 @@
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(RTCCON|RTCAER|RTCYEAR|RTCMON|RTCDAY|RTCHOUR|RTCMIN|RTCSEC|RTCDWR|INTEGER|FRACTION)\b</string>
+					<key>name</key>
+					<string>support.class</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b(pdata|temp|rega|regb|regab|regc|queue|contr|contw|contru|contwu|loopcnt|mark|null|clk_bt|clk_rt|clke_bt|clke_rt|pc)\b</string>
 					<key>name</key>
 					<string>support.class</string>
 				</dict>
@@ -541,6 +589,12 @@
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(W|F)\b</string>
+					<key>name</key>
+					<string>support.function</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)\b(blank|positive|true|user|user2|user3|zero|master|slave|wake|match|timeout|sync|le)\b</string>
 					<key>name</key>
 					<string>support.function</string>
 				</dict>
