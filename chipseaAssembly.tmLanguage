@@ -96,7 +96,7 @@
 					<key>match</key>
 					<string>(?i)\b(([0-9]+\.[0-9]*)(e[+-]?[0-9]+)?|\.?[0-9]+e[+-]?[0-9]+)\b</string>
 					<key>name</key>
-					<string>constant.numeric.floating-point</string>
+					<string>constant.numeric.floating</string>
 				</dict>
 				<dict>
 					<key>match</key>
@@ -184,19 +184,19 @@
 					<key>match</key>
 					<string>(?i)\b(addlw|addpcw|addwf|addwfc|andlw|andwf|bcf|bsf|btfsc|btfss|call|clrf|clrwdt|comf|daw)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(decf|decfsz|goto|halt|incf|incfsz|iorlw|iorwf|movfw|movlw|movp|movwf|nop|pop|push)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(retfie|retlw|return|rlf|rrf|sleep|sublw|subwf|subwfc|swapf|tblp|xorlw|xorwf)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>comment</key>
@@ -206,91 +206,91 @@
 					<key>match</key>
 					<string>(?i)\b(movlf|movff|movff2|movff3|movff4|movff5|movff6)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(sublf|subff|subff2|subff3|subff4|subff5|subff6)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(addlf|addff|addff2|addff3|addff4|addff5|addff6)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(clrf2|clrf3|clrf4|clrf5|clrf6)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(rlf2|rlf3|rlf4|rlf5|rlf6)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(rrf2|rrf3|rrf4|rrf5|rrf6)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(addfff3|subfff3)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(jz|jnz|jc|jnc|jb|jnb|je|jne)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(and|and_into|iand|iand_into|ior|ixor|or|or_into|)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(add|sub|div|iadd|isub|idiv|increase|imul32|random|pincrease|mul32)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(lshift|lshift2|lshift3|lshift4|rshift|rshift2|rshift3|rshift4|setflag|nsetflag)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(isolate1|isolate0|qisolate1|qisolate0|set0|set1|byteswap|setflip|qset0|qset1|compare|icompare|invert|reverse)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(jam|hjam|fetch|fetcht|ifetch|ifetcht|hfetch|hfetcht|store|storet|istore|istoret)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(hstore|force|iforce|arg|setarg|copy|deposit|disable|enable)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(call|rtn|nrtn|rtneq|rtnbit1|rtnbit0|branch|bbit1|bbit0|beq|bne|loop|bpatch|parse)\b</string>
 					<key>name</key>
-					<string>keyword.control.chipsea.Instruction</string>
+					<string>keyword.control.chipsea.instruction</string>
 				</dict>
 			</array>
 		</dict>
@@ -374,229 +374,229 @@
 					<key>match</key>
 					<string>(?i)\b(Z|C|DC|TO|PD)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(E0IF|E1IF|ADIF|TMIF|AD2IF|TM0IF|TM1IF)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(E0IE|E1IE|ADIE|TMIE|GIE|AD2IE|TM0IE|TM1IE)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(PAGE0|PAGE1|IRP1|IRP0)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(WDTS0|WDTS1|WDTS2|WDTS3|Wdt_lcd|WDTEN|WDTS_0|WDTS_1|WDTS_2)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(INS0|INS1|INS2|TMEN|TRST)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(ADM0|ADM1|ADM2|ADSC|ADM_0|ADM_1|ADM_2)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(M1_CK|M2_CK)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(S_BEEP0|S_BEEP1|LCDSCKS0|LCDSCKS1|LCDSCKS2|LCDSCKS3)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(CLK_SEL|M3_CK|EO_SLP|CST_IN|CST_E|XTALSEL|TMSEL0|TMSEL1)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(CHPCKS0|CHPCKS1|CHPCKS2|CM_SEL|SINL_0|SINL_1|ACM|SINL0|SINL1)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(ERV)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(ADEN|ADG0|ADG_0|ADG_1|ADG1|ADG_M0|ADG_M1|CHOPM0|CHOPM1|CHOPM_0|CHOPM_1)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(LCDREF0|LCDREF1|VLCDX0|VLCDX1|Level_s|LCDCH)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(ENLB|SILB0|SILB1|SILB2|LDOS0|LDOS1|LB_RST_CON|SILB_0|SILB_1|SILB_2|LDOS_0|LDOS_1)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(ENVB|BGID0|BGID1|BGID2|BGID3|ENVDDA|LDOEN|LVR_EN|CHP_VPP)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(LBOUT)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(AIENB1|AIENB2|AIENB3)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(E0M0|E0M1|E1M0|E1M1|E0M_0|E0M_1|E1M_0|E1M_1|BZEN)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(BZSEL|SEGCON0|SEGCON1)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(PTW0_0|PTW0_1|PTW0_2|PTW1_0|PTW1_1|PTW1_2|PTW1_3)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(URRIF|URTIF|RTCIF)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(URRIE|URTIE|RTCIE)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(T0SEL|T0RSTB|T0RATE_0|T0RATE_1|T0RATE_2|T0EN)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(PWM1OUT|T1OUT|T1RSTB|T1CKS|T1RATE_0|T1RATE_1|T1RATE_2|T1EN)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(LED_PMODE|LEDCLKS_0|LEDCLKS_1|LED_DUTY0|LED_DUTY1|LED_DUTY2|LED_Current0|LED_Current1|LED_Current2)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(LEDEN|CONT_SEL)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(CSE_LCD)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(CHPEN|CHPCLKS_0|CHPCLKS_1|CHPCLKS_2|CHPVS)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(AD2EN)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(RTCEN|H_24_12|LIR)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(DWR_0|DWR_1|DWR_2)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(ENPMPL|LCD_DUTY0|LCD_DUTY1|LEVEL|LCDWS|LCDEN|LCDCKS0|LCDCKS1)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(WDT_C1|WDT_C2|WDT_C3)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(UARTENUR0_RNIE||UART_SEL|RB8|TB8|REN|SM2|SM1|SM0)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(SMOD)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(W|F)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b(blank|positive|true|user|user2|user3|zero|master|slave|wake|match|timeout|sync|le)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
@@ -618,12 +618,6 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>^\s*(%%)?(\w|[\._?])(\w|[_$#@~\.?])*\:</string>
-					<key>name</key>
-					<string>support.function</string>
-				</dict>
-				<dict>
-					<key>match</key>
 					<string>^\s*([$@~])(\w|[_$#@~\.?])*\:</string>
 					<key>name</key>
 					<string>support.function</string>
@@ -638,19 +632,19 @@
 					<key>match</key>
 					<string>(?i)\b([FL]_[(\w|[_$#@~\.?])]*)\b</string>
 					<key>name</key>
-					<string>support.function</string>
+					<string>support.function.chipsea</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b([R]_[(\w|[_$#@~\.?])]*)\b</string>
 					<key>name</key>
-					<string>method.chipsea</string>
+					<string>variable.other</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?i)\b([M]_[(\w|[_$#@~\.?])]*)\b</string>
 					<key>name</key>
-					<string>storage.type</string>
+					<string>entity.name.constant</string>
 				</dict>
 				<dict>
 					<key>match</key>
@@ -662,7 +656,7 @@
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.chipsea.assembly</string>
+	<string>source.chipsea</string>
 	<key>uuid</key>
 	<string>6157814c-5c11-4dcf-8d6f-c550b8a8d11a</string>
 </dict>

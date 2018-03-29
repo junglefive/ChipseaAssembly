@@ -3,11 +3,24 @@ import sublime_plugin
 import re
 import os
 import sys
+import sqlite3
 
+# connect=sqlite3.connect('chipsea.db')
 
 class ChipseaCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         self.view.insert(edit, 0, "Hello, World!")
+
+
+class GotoFunctionCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        buf =self.view.substr(self.view.sel()[0])
+        find_list = self.view.find_by_selector("support.function") #comment.line.string
+        print(str(type(find_list)))
+        for i in find_list:
+            print(str(i.a)+":"+str(i.b))
+            print(self.view.substr(i))
+
 
 class ChipseaGetDefine(sublime_plugin.ViewEventListener  ):
     """docstring for ChipseaGetDefine"sublime_plugin.ViewEventListener  def __init__(self, arg):
