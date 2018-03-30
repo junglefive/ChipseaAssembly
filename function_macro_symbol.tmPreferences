@@ -5,7 +5,7 @@
    <key>name</key>
    <string>Symbol List</string>
    <key>scope</key>
-   <string>source.chipsea variable.other</string>
+   <string>source.chipsea  entity.name.constant</string>
    <key>settings</key>
    <dict>
       <key>showInIndexedSymbolList</key>
